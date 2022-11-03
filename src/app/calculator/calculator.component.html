@@ -1,7 +1,7 @@
 <h1 class="rounded-3">{{ resultat }}</h1>
 
-<input #nbre1 class="form-control mb-2" placeholder="Entrer le nombre 1" />
-<input #nbre2 class="form-control mb-2" placeholder="Entrer le nombre 2"/>
+<input (keydown)="checkInputValue($event)" #nbre1 class="form-control mb-2" placeholder="Entrer le nombre 1" />
+<input (keydown)="checkInputValue($event)" #nbre2 class="form-control mb-2" placeholder="Entrer le nombre 2"/>
 <select #operateur class="form-control">
   <option value="+">Additon</option>
   <option value="-">Soustraction</option>

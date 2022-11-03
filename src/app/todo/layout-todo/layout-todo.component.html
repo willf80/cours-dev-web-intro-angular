@@ -1,0 +1,22 @@
+<app-nav-bar [titre]="navBarTitre"  ></app-nav-bar>
+
+<main class="container">
+  <p>Bonjour {{ nom }} </p>
+  <p *ngIf="isAdmin === true">Mot de passe Admin : Xsskndl0UDdd</p>
+  <p *ngIf="isAdmin === false" class="alert alert-warning">Vous n'êtes pas un adminitrateur</p>
+
+  <table class="table">
+    <thead>
+      <th>#</th>
+      <th>Nom</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nom of listeDeClasse; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{nom}}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
+
